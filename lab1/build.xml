@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="Lab1" default="deploy">
+    <property name="src" location="src"/>
+    <property name="web" location="web"/>
+    <property name="war" location="war"/>
+
+    <property name="tomcat" location="C:\Program Files\apache-tomcat-10.0.10\"/>
+
+    <target name="clean">
+        <delete dir="${src}"/>
+        <delete dir="${war}"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${src}"/>
+        <mkdir dir="${war}"/>
+    </target>
+
+    <target name="build" depends="init">
+        <war destfile="${war}/Lab1.war" webxml="web/WEB-INF/web.xml">
+            <fileset dir="${web}"/>
+        </war>
+    </target>
+
+    <target name="deploy" depends="build">
+        <copy file="war/Lab1.war" todir="${tomcat}/webapps"/>
+        <exec executable="${tomcat}/bin/shutdown.bat"/>
+        <exec executable="${tomcat}/bin/startup.bat"/>
+    </target>
+</project>

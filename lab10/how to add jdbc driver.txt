@@ -1,0 +1,3 @@
+Steps to reproduce
+1. download jar https://jdbc.postgresql.org/download.html
+2. move in ...\apache-tomcat-10.0.10\lib

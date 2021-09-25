@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>taglib</short-name>
+    <uri>taglib.tld</uri>
+
+<!--    https://www.opennet.ru/docs/RUS/javadoc_jsp/jsp/Tag.html-->
+    <tag>
+        <name>dossier</name>
+        <tag-class>by.bstu.tag.Dossier</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>lastname</name>
+        <tag-class>by.bstu.tag.Lastname</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>surname</name>
+        <tag-class>by.bstu.tag.Surname</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>sex</name>
+        <tag-class>by.bstu.tag.Sex</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>submit</name>
+        <tag-class>by.bstu.tag.Submit</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>type</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+</taglib>

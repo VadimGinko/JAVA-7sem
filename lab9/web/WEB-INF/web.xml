@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>CCCRequest</servlet-name>
+        <servlet-class>by.belstu.servlet.CccRequest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CCCRequest</servlet-name>
+        <url-pattern>/cccrequest</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>JspFilter</filter-name>
+        <filter-class>by.belstu.filter.JspFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>JspFilter</filter-name>
+        <url-pattern>/Qqq.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>F1</filter-name>
+        <filter-class>by.belstu.filter.F1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>F1</filter-name>
+        <servlet-name>CCCRequest</servlet-name>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>F2</filter-name>
+        <filter-class>by.belstu.filter.F2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>F2</filter-name>
+        <servlet-name>CCCRequest</servlet-name>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>F3</filter-name>
+        <filter-class>by.belstu.filter.F3</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>F3</filter-name>
+        <servlet-name>CCCRequest</servlet-name>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>by.belstu.listener.L1</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>by.belstu.listener.L2</listener-class>
+    </listener>
+</web-app>
